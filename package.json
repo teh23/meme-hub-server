@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "deploy": "rm -rf build && cd ../client && npm run build --prod  && cp -r build ../server && cd ../server"
+    "deploy": "rm -rf build && cd .. && npm run build --prod  && cp -r build ./meme-hub-server && cd ./meme-hub-server"
   },
   "author": "",
   "license": "ISC",
