@@ -6,7 +6,8 @@ var usersRouters = require("./routes/users.js")
 const tagsRoutes = require("./routes/tags.js")
 var mongoose = require("mongoose")
 const cors = require('cors')
-
+const path = require('path');
+const publicPath = path.join(__dirname,  'build');
 
 const url = process.env.URL
 
@@ -23,7 +24,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFind
 
 app.use(express.json())
 app.use(cors())
-app.use(express.static('build'))
+app.use(express.static(publicPath ))
 
 app.use("/api/tags", tagsRoutes)
 app.use("/api/mems" , memsRoutes)
