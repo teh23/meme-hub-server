@@ -26,6 +26,9 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static(publicPath ))
 
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 app.use("/api/tags", tagsRoutes)
 app.use("/api/mems" , memsRoutes)
 app.use("/api/users", usersRouters )
