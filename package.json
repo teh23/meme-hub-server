@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "build": "rm -rf build && cd .. && npm run build --prod  && cp -r build ./meme-hub-server && cd ./meme-hub-server",
+    "build": "node index.js",
     "deploy:full": "npm run build && git add . && git commit -m uibuild && git push && npm run deploy",
     "deploy": "git push heroku master",
     "start": "node index.js"
