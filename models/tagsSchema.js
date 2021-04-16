@@ -1,9 +1,15 @@
-var mongoose = require("mongoose")
-var Schema = mongoose.Schema
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
 
-var tagsSchema = new Schema({
-   title: String,
-   data: Date,
+const tagsSchema = new Schema({
+   title: {
+      type: String,
+      required: true
+   },
+   data: {
+      type: Date,
+      required: true
+   }
 })
 
 tagsSchema.set('toJSON',{

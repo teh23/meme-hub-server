@@ -6,7 +6,8 @@ const tagsController = require('../controllers/tags.js')
 // /api/mems/*
 router.get("/", tagsController.index);
 
-router.get("/:title", tagsController.getByTitle)
+router.get("/title/:title", tagsController.getByTitle)
+router.get("/id/:id", tagsController.getById)
 
 
 router.post("/", tagsController.add)
