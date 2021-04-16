@@ -1,10 +1,10 @@
-var express = require("express")
+const express = require("express")
 require('dotenv').config()
-var app = express()
-var memsRoutes = require("./routes/mems")
-var usersRouters = require("./routes/users.js")
+const app = express()
+const memsRoutes = require("./routes/mems")
+const usersRouters = require("./routes/users.js")
 const tagsRoutes = require("./routes/tags.js")
-var mongoose = require("mongoose")
+const mongoose = require("mongoose")
 const cors = require('cors')
 const path = require('path');
 const publicPath = path.join(__dirname,  'build');
@@ -33,7 +33,7 @@ app.use("/api/tags", tagsRoutes)
 app.use("/api/mems" , memsRoutes)
 app.use("/api/users", usersRouters )
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })

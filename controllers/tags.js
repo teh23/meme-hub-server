@@ -5,7 +5,7 @@ const tagsModel = require('../models/tagsSchema.js')
 
 exports.index = (req, res) => {
     tagsModel.find({}).then((doc) => {
-        res.status(200).send(doc)
+        res.status(200).json(doc)
     })
 
 }
